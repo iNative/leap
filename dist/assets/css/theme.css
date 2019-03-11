@@ -105,7 +105,7 @@ ul ol {
   margin-bottom: 0; }
 
 dt {
-  font-weight: 500; }
+  font-weight: 700; }
 
 dd {
   margin-bottom: .5rem;
@@ -434,7 +434,7 @@ kbd {
   kbd kbd {
     padding: 0;
     font-size: 100%;
-    font-weight: 500; }
+    font-weight: 700; }
 
 pre {
   display: block;
@@ -3763,7 +3763,7 @@ input[type="button"].btn-block {
   color: inherit; }
 
 .alert-link {
-  font-weight: 500; }
+  font-weight: 700; }
 
 .alert-dismissible {
   padding-right: 4rem; }
@@ -4165,7 +4165,7 @@ input[type="button"].btn-block {
 .close {
   float: right;
   font-size: 1.5rem;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 1;
   color: #000;
   text-shadow: 0 1px 0 #fff;
@@ -7611,7 +7611,7 @@ button.bg-primary-3:focus {
   font-weight: 400 !important; }
 
 .font-weight-bold {
-  font-weight: 500 !important; }
+  font-weight: 700 !important; }
 
 .font-weight-bolder {
   font-weight: bolder !important; }
@@ -8055,7 +8055,7 @@ a.card {
           transform: rotateZ(0deg); }
 
 .dropdown-item {
-  font-weight: 500;
+  font-weight: 700;
   transition: color 0.1s ease; }
 
 .dropdown-menu {
@@ -8476,7 +8476,7 @@ small {
     font-weight: 700; }
 
 strong {
-  font-weight: 500; }
+  font-weight: 700; }
 
 .text-light a:not(.btn), .text-light h1, .text-light h2, .text-light h3, .text-light h4, .text-light h5, .text-light h6, .text-light .h1, .text-light .h2, .text-light .h3, .text-light .h4, .text-light .h5, .text-light .h6, .text-light .display-1, .text-light .display-2, .text-light .display-3, .text-light .display-4 {
   color: #fff; }
@@ -9547,7 +9547,7 @@ figure {
 figcaption {
   margin-top: 0.75rem;
   font-size: 0.875rem;
-  font-weight: 500;
+  font-weight: 700;
   color: #adb5bd; }
 
 blockquote {
@@ -10724,7 +10724,7 @@ https://flickity.metafizzy.co
 
 .form-group label {
   font-size: 0.875rem;
-  font-weight: 500;
+  font-weight: 700;
   color: #adb5bd; }
   .form-group label.custom-control-label {
     color: #495057; }
@@ -10745,7 +10745,7 @@ https://flickity.metafizzy.co
   fill: #212529 !important; }
 
 .input-group .input-group-text {
-  font-weight: 500; }
+  font-weight: 700; }
 
 .input-group-prepend .input-group-text {
   padding-right: 0; }
@@ -10826,7 +10826,7 @@ https://flickity.metafizzy.co
     min-width: 13px;
     text-align: center;
     color: #adb5bd;
-    font-weight: 500;
+    font-weight: 700;
     display: block; }
     .custom-range-labels > span:before {
       content: '';
@@ -11278,7 +11278,7 @@ https://flickity.metafizzy.co
   margin-top: .5rem;
   color: #adb5bd;
   font-size: 0.75rem;
-  font-weight: 500;
+  font-weight: 700;
   bottom: -8px; }
 
 .irs-slider.single {
@@ -12624,7 +12624,7 @@ body {
     opacity: 0; }
 
 .popover {
-  font-weight: 500;
+  font-weight: 700;
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175); }
 
 .popover-header {
@@ -12778,7 +12778,7 @@ body {
     background: rgba(255, 255, 255, 0.25); } }
 
 .progress-bar {
-  font-weight: 500; }
+  font-weight: 700; }
   .progress-bar:only-child {
     border-radius: 10rem; }
 
@@ -12829,7 +12829,7 @@ progress.reading-position::-moz-progress-bar {
   top: 0; }
 
 th {
-  font-weight: 500;
+  font-weight: 700;
   color: #212529; }
 
 .table-dark th {
@@ -12856,7 +12856,7 @@ article table {
     border-bottom: 1px solid #dee2e6; }
 
 .tooltip {
-  font-weight: 500; }
+  font-weight: 700; }
 
 .user img {
   border-radius: 50%;
