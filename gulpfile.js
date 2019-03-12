@@ -8,10 +8,13 @@ const autoprefixer = require('gulp-autoprefixer'),
   del = require('del'),
   eslint = require('gulp-eslint'),
   gulp = require('gulp'),
+  data = require('gulp-data'),
   log = require('fancy-log'),
   newer = require('gulp-newer'),
   nunjucksRender = require('gulp-nunjucks-render'),
+  jsonfile 	= require('jsonfile'),
   path = require('path'),
+  parser = require('rssparser'),
   reload = browserSync.reload,
   rename = require('gulp-rename'),
   rollup = require('rollup'),
@@ -133,15 +136,45 @@ gulp.task('nun', async(done) => {
 	
 //nunjucks tasks
 // Gets .html and .nunjucks files in pages
-return gulp.src('pages/**/*.+(html|nunjucks)')
-   
-    // Renders template with nunjucks
-    .pipe(nunjucksRender({
-        path: ['pages/templates']
-    }))
-    // output files in app folder
-    .pipe(gulp.dest('dist'))
-	done();
+/*
+	
+
+	
+*/
+	var options 	= {	
+		jar: 'AspxAutoDetectCookieSupport=1',
+		headers:{"User-Agent":"Mozilla some"}
+	};
+	
+	parser.parseURL('http://www.maxhire.net/cp/?EA5E6F361D4344501D246F52&L=EN', options, function(err, out){
+		console.log('Processing...'+out.title);
+		jsonfile.writeFile('feeds.json', out, function(err) {
+            if (err) console.error(err)
+				else {
+				//nunjucks tasks
+				// Gets .html and .nunjucks files in pages
+				 gulp.src('pages/**/*.+(html|nunjucks)')
+				    // adds data
+				    .pipe(data(function() {
+				        return require('./feeds.json')
+				    }))
+				    // Renders template with nunjucks
+				    .pipe(nunjucksRender({
+				        path: ['pages/templates']
+				    }))
+				    // output files in app folder
+				    .pipe(gulp.dest('dist'))
+					done();
+					
+					
+				}
+        })
+		console.log('next up')
+	});
+	
+	
+	
+	
 });
 
 

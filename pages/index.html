@@ -63,7 +63,7 @@
               </a>
               <a href="assets/img/x_interview_2.jpg" data-fancybox="Collage Gallery">
                 <div>
-                  <img src="assets/img/x_interview_2.jpg" alt="Image" class="rounded" data-aos="fade-up">
+                  <img src="assets/img/x_inner-3.jpg" alt="Image" class="rounded" data-aos="fade-up">
                 </div>
               </a>
               <a href="assets/img/x_interview_3.jpg" data-fancybox="Collage Gallery" class="d-none d-lg-block">
@@ -165,7 +165,7 @@
       </div>
     </div>
     </section>
-    <section>
+    <section id="jobs">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-xl-10">
@@ -183,44 +183,25 @@
                 <span class="text-small text-muted">Team</span>
               </div>
               <div class="col">
-                <span class="text-small text-muted">Location</span>
+                <span class="text-small text-muted">When</span>
               </div>
             </div>
             <div class="list-group list-group-flush">
-              <a href="career-single.html" class="list-group-item list-group-item-action row no-gutters py-3">
+			 {% for feed in items %}
+			 					
+              
+              <a data-toggle="modal" href="#sign-in-modal{{loop.index}}" class="list-group-item list-group-item-action row no-gutters py-3">
                 <div class="col-xl-8 col-lg-7 col-md-6">
-                  <h5 class="mb-0">Advanced Manufacturing Engineer</h5>
+                  <h5 class="mb-0"> {{feed.title }}</h5>
                 </div>
                 <div class="col-md">
-                  <span>Engineering</span>
+                  <span> {{feed.categories }}</span>
                 </div>
                 <div class="col-md">
-                  <span>Sydney, AU</span>
+                  <span> {{feed.time_ago }}</span>
                 </div>
               </a>
-              <a href="career-single.html" class="list-group-item list-group-item-action row no-gutters py-3">
-                <div class="col-xl-8 col-lg-7 col-md-6">
-                  <h5 class="mb-0">AI Research Scientist</h5>
-                </div>
-                <div class="col-md">
-                  <span>Engineering</span>
-                </div>
-                <div class="col-md">
-                  <span>San Francisco, CA</span>
-                </div>
-              </a>
-              <a data-toggle="modal" href="#sign-in-modal" class="list-group-item list-group-item-action row no-gutters py-3">
-                <div class="col-xl-8 col-lg-7 col-md-6">
-                  <h5 class="mb-0">Senior Software Engineer</h5>
-                </div>
-                <div class="col-md">
-                  <span>Engineering</span>
-                </div>
-                <div class="col-md">
-                  <span>San Francisco, CA</span>
-                </div>
-              </a>
-              <div class="modal fade" id="sign-in-modal" tabindex="-1" role="dialog" aria-hidden="true">
+              <div class="modal fade" id="sign-in-modal{{loop.index}}" tabindex="-1" role="dialog" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                   <div class="modal-content">
                     <div class="modal-body">
@@ -234,83 +215,17 @@
 
                       </button>
                       <div class="m-xl-4 m-3">
-                        <div class="text-center mb-4">
-                          <h4 class="h3 mb-1">Welcome back</h4>
-                          <span>Enter your account details below</span>
-                        </div>
-                        <form>
-                          <div class="form-group">
-                            <input type="email" name="login-email" placeholder="Email Address" class="form-control">
-                          </div>
-                          <div class="form-group">
-                            <input type="password" name="login-password" placeholder="Password" class="form-control">
-                            <small><a href="#">Forgot your password?</a>
-                            </small>
-                          </div>
-                          <div class="form-group">
-                            <button class="btn-block btn btn-primary" type="submit">Sign in</button>
-                          </div>
-                          <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="login-remember">
-                            <label class="custom-control-label text-small text-muted" for="login-remember">Keep me signed in</label>
-                          </div>
-                          <hr>
-                          <div class="text-center text-small text-muted">
-                            <span>Don't have an account yet? <a href="#">Create one</a>
-                            </span>
-                          </div>
-                        </form>
+                        {{feed.summary | safe}}
+						
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <a href="career-single.html" class="list-group-item list-group-item-action row no-gutters py-3">
-                <div class="col-xl-8 col-lg-7 col-md-6">
-                  <h5 class="mb-0">UX Designer</h5>
-                </div>
-                <div class="col-md">
-                  <span>Design</span>
-                </div>
-                <div class="col-md">
-                  <span>Remote</span>
-                </div>
-              </a>
-              <a href="career-single.html" class="list-group-item list-group-item-action row no-gutters py-3">
-                <div class="col-xl-8 col-lg-7 col-md-6">
-                  <h5 class="mb-0">Principal Product Designer</h5>
-                </div>
-                <div class="col-md">
-                  <span>Design</span>
-                </div>
-                <div class="col-md">
-                  <span>Sydney, AU</span>
-                </div>
-              </a>
-              <a href="career-single.html" class="list-group-item list-group-item-action row no-gutters py-3">
-                <div class="col-xl-8 col-lg-7 col-md-6">
-                  <h5 class="mb-0">Director, Brand Design</h5>
-                </div>
-                <div class="col-md">
-                  <span>Marketing</span>
-                </div>
-                <div class="col-md">
-                  <span>Sydney, AU</span>
-                </div>
-              </a>
-              <a href="career-single.html" class="list-group-item list-group-item-action row no-gutters py-3">
-                <div class="col-xl-8 col-lg-7 col-md-6">
-                  <h5 class="mb-0">Marketing Operations Manager</h5>
-                </div>
-                <div class="col-md">
-                  <span>Marketing</span>
-                </div>
-                <div class="col-md">
-                  <span>San Francisco, CA</span>
-                </div>
-              </a>
+           {% endfor %}  
+			 
             </div>
-            <span class="d-block mt-4">Didn't see your job? <a href="#" class="hover-arrow">Drop your resumé</a>
+            <span class="d-block mt-4">Didn't see your job? <a href="https://www.maxhire.net/cp/jobbasket.aspx" target="_blank" class="hover-arrow">Drop your resumé</a>
             </span>
           </div>
         </div>
